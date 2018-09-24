@@ -1,6 +1,6 @@
 # todo
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/2638b8d71429c47ec1a6/maintainability)](https://codeclimate.com/github/timrourke/todo-frontend/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/2638b8d71429c47ec1a6/test_coverage)](https://codeclimate.com/github/timrourke/todo-frontend/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/2638b8d71429c47ec1a6/maintainability)](https://codeclimate.com/github/timrourke/todo-frontend/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/2638b8d71429c47ec1a6/test_coverage)](https://codeclimate.com/github/timrourke/todo-frontend/test_coverage) [![CircleCI](https://circleci.com/gh/timrourke/todo-frontend.svg?style=svg)](https://circleci.com/gh/timrourke/todo-frontend)
 
 A front end for a todo application.
 
