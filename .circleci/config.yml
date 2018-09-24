@@ -14,7 +14,7 @@ jobs:
 
       - run:
           name: Add Yarn global path to user path
-          run: export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
+          command: export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
 
       - restore_cache:
           name: Restore Yarn Package Cache
