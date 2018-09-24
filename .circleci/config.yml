@@ -1,0 +1,43 @@
+version: 2
+jobs:
+  node:
+    working_directory: ~/todo-frontend
+
+    docker:
+      - image: circleci/node:latest-browsers
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+
+      - run:
+          name: Install Dependencies
+          command: yarn install
+
+      - run:
+          name: Install CodeClimate coverage reporter
+          command: yarn global add codeclimate-test-reporter
+
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+
+      - run:
+          name: Run tests
+          command: |
+            COVERAGE=true node_modules/.bin/ember test
+
+      - run:
+          name: Report code coverage to Code Climate
+          command: codeclimate-test-reporter < ./coverage/lcov.info
+
+      - store_artifacts:
+          path: coverage
+          prefix: coverage
+
