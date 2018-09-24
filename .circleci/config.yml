@@ -3,6 +3,7 @@ jobs:
   build:
     environment:
       CC_TEST_REPORTER_ID: f4f10ef21d69aa3cd46c0b75775af8c76147a3ecbd66647f7fe5a42f678982f6
+      PATH: "$PATH:$HOME/.config/yarn/global/node_modules/.bin"
 
     working_directory: ~/todo-frontend
 
@@ -11,10 +12,6 @@ jobs:
 
     steps:
       - checkout
-
-      - run:
-          name: Add Yarn global path to user path
-          command: export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
 
       - restore_cache:
           name: Restore Yarn Package Cache
