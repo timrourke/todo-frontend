@@ -1,7 +1,8 @@
 # todo
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+[![Maintainability](https://api.codeclimate.com/v1/badges/2638b8d71429c47ec1a6/maintainability)](https://codeclimate.com/github/timrourke/todo-frontend/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/2638b8d71429c47ec1a6/test_coverage)](https://codeclimate.com/github/timrourke/todo-frontend/test_coverage)
+
+A front end for a todo application.
 
 ## Prerequisites
 
