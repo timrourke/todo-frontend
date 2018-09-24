@@ -1,6 +1,9 @@
 version: 2
 jobs:
   build:
+    environment:
+      CC_TEST_REPORTER_ID: f4f10ef21d69aa3cd46c0b75775af8c76147a3ecbd66647f7fe5a42f678982f6
+
     working_directory: ~/todo-frontend
 
     docker:
