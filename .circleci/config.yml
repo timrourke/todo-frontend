@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  node:
+  build:
     working_directory: ~/todo-frontend
 
     docker:
@@ -32,6 +32,14 @@ jobs:
           name: Run tests
           command: |
             COVERAGE=true node_modules/.bin/ember test
+
+      - run:
+          name: Lint JS
+          command: yarn lint:js
+
+      - run:
+          name: Lint HBS files
+          command: yarn lint:hbs
 
       - run:
           name: Report code coverage to Code Climate
